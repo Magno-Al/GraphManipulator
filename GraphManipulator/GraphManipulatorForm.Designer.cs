@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgv_adjacencyMatrix = new DataGridView();
             btn_addEdge = new Button();
             btn_exhibitionModeList = new Button();
@@ -37,14 +38,11 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            dgv_adjacencyListVertices = new DataGridView();
-            Vertices = new DataGridViewTextBoxColumn();
-            dgv_adjacencyListEdges = new DataGridView();
+            dgv_adjacencyList = new DataGridView();
             btn_av_addVertex = new Button();
             btn_removeEdge = new Button();
             label4 = new Label();
             label5 = new Label();
-            chb_directedGraph = new CheckBox();
             label6 = new Label();
             tb_av_vertexName = new TextBox();
             label7 = new Label();
@@ -60,9 +58,10 @@
             cb_selectSucessorEdge = new ComboBox();
             cb_selectPredecessorEdge = new ComboBox();
             lb_vertexReturn = new Label();
+            chb_directedGraph = new CheckBox();
+            btn_Start = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyMatrix).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyListVertices).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyListEdges).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyList).BeginInit();
             pn_addVertex.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -79,19 +78,19 @@
             dgv_adjacencyMatrix.Location = new Point(335, 74);
             dgv_adjacencyMatrix.Name = "dgv_adjacencyMatrix";
             dgv_adjacencyMatrix.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_adjacencyMatrix.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_adjacencyMatrix.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_adjacencyMatrix.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             dgv_adjacencyMatrix.RowTemplate.Height = 25;
-            dgv_adjacencyMatrix.Size = new Size(1048, 692);
+            dgv_adjacencyMatrix.Size = new Size(926, 837);
             dgv_adjacencyMatrix.TabIndex = 0;
             dgv_adjacencyMatrix.Visible = false;
             // 
@@ -108,7 +107,9 @@
             // 
             // btn_exhibitionModeList
             // 
-            btn_exhibitionModeList.Location = new Point(170, 10);
+            btn_exhibitionModeList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btn_exhibitionModeList.Enabled = false;
+            btn_exhibitionModeList.Location = new Point(893, 10);
             btn_exhibitionModeList.Name = "btn_exhibitionModeList";
             btn_exhibitionModeList.Size = new Size(176, 23);
             btn_exhibitionModeList.TabIndex = 5;
@@ -118,7 +119,9 @@
             // 
             // btn_exhibitionModeMatrix
             // 
-            btn_exhibitionModeMatrix.Location = new Point(353, 10);
+            btn_exhibitionModeMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btn_exhibitionModeMatrix.Enabled = false;
+            btn_exhibitionModeMatrix.Location = new Point(1076, 10);
             btn_exhibitionModeMatrix.Name = "btn_exhibitionModeMatrix";
             btn_exhibitionModeMatrix.Size = new Size(176, 23);
             btn_exhibitionModeMatrix.TabIndex = 6;
@@ -128,9 +131,10 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(735, 9);
             label1.Name = "label1";
             label1.Size = new Size(135, 21);
             label1.TabIndex = 7;
@@ -156,57 +160,39 @@
             label3.TabIndex = 9;
             label3.Text = "Gerenciar Arestas:";
             // 
-            // dgv_adjacencyListVertices
+            // dgv_adjacencyList
             // 
-            dgv_adjacencyListVertices.AllowUserToAddRows = false;
-            dgv_adjacencyListVertices.AllowUserToDeleteRows = false;
-            dgv_adjacencyListVertices.AllowUserToResizeColumns = false;
-            dgv_adjacencyListVertices.AllowUserToResizeRows = false;
-            dgv_adjacencyListVertices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            dgv_adjacencyListVertices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_adjacencyListVertices.Columns.AddRange(new DataGridViewColumn[] { Vertices });
-            dgv_adjacencyListVertices.Location = new Point(335, 74);
-            dgv_adjacencyListVertices.Name = "dgv_adjacencyListVertices";
-            dgv_adjacencyListVertices.ReadOnly = true;
-            dgv_adjacencyListVertices.RowHeadersVisible = false;
-            dgv_adjacencyListVertices.RowTemplate.Height = 25;
-            dgv_adjacencyListVertices.Size = new Size(91, 692);
-            dgv_adjacencyListVertices.TabIndex = 11;
-            dgv_adjacencyListVertices.Visible = false;
-            // 
-            // Vertices
-            // 
-            Vertices.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.MistyRose;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = Color.MistyRose;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            Vertices.DefaultCellStyle = dataGridViewCellStyle4;
-            Vertices.Frozen = true;
-            Vertices.HeaderText = "Vertices";
-            Vertices.Name = "Vertices";
-            Vertices.ReadOnly = true;
-            Vertices.Resizable = DataGridViewTriState.False;
-            Vertices.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgv_adjacencyListEdges
-            // 
-            dgv_adjacencyListEdges.AllowUserToAddRows = false;
-            dgv_adjacencyListEdges.AllowUserToDeleteRows = false;
-            dgv_adjacencyListEdges.AllowUserToResizeColumns = false;
-            dgv_adjacencyListEdges.AllowUserToResizeRows = false;
-            dgv_adjacencyListEdges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgv_adjacencyListEdges.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_adjacencyListEdges.Location = new Point(442, 74);
-            dgv_adjacencyListEdges.Name = "dgv_adjacencyListEdges";
-            dgv_adjacencyListEdges.ReadOnly = true;
-            dgv_adjacencyListEdges.RowTemplate.Height = 25;
-            dgv_adjacencyListEdges.Size = new Size(941, 692);
-            dgv_adjacencyListEdges.TabIndex = 12;
-            dgv_adjacencyListEdges.Visible = false;
+            dgv_adjacencyList.AllowUserToAddRows = false;
+            dgv_adjacencyList.AllowUserToDeleteRows = false;
+            dgv_adjacencyList.AllowUserToResizeColumns = false;
+            dgv_adjacencyList.AllowUserToResizeRows = false;
+            dgv_adjacencyList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgv_adjacencyList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_adjacencyList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgv_adjacencyList.DefaultCellStyle = dataGridViewCellStyle3;
+            dgv_adjacencyList.Location = new Point(335, 74);
+            dgv_adjacencyList.Name = "dgv_adjacencyList";
+            dgv_adjacencyList.ReadOnly = true;
+            dgv_adjacencyList.RowHeadersVisible = false;
+            dgv_adjacencyList.RowHeadersWidth = 20;
+            dgv_adjacencyList.RowTemplate.Height = 25;
+            dgv_adjacencyList.Size = new Size(926, 837);
+            dgv_adjacencyList.TabIndex = 12;
+            dgv_adjacencyList.Visible = false;
             // 
             // btn_av_addVertex
             // 
@@ -246,17 +232,6 @@
             label5.Size = new Size(56, 15);
             label5.TabIndex = 16;
             label5.Text = "Sucessor:";
-            // 
-            // chb_directedGraph
-            // 
-            chb_directedGraph.AutoSize = true;
-            chb_directedGraph.Enabled = false;
-            chb_directedGraph.Location = new Point(8, 17);
-            chb_directedGraph.Name = "chb_directedGraph";
-            chb_directedGraph.Size = new Size(122, 19);
-            chb_directedGraph.TabIndex = 17;
-            chb_directedGraph.Text = "Grafo Direcionado";
-            chb_directedGraph.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -362,7 +337,6 @@
             panel2.Controls.Add(lb_edgeReturn);
             panel2.Controls.Add(cb_selectSucessorEdge);
             panel2.Controls.Add(cb_selectPredecessorEdge);
-            panel2.Controls.Add(chb_directedGraph);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(btn_removeEdge);
@@ -416,18 +390,39 @@
             lb_vertexReturn.TabIndex = 29;
             lb_vertexReturn.Text = "Retorno";
             // 
+            // chb_directedGraph
+            // 
+            chb_directedGraph.AutoSize = true;
+            chb_directedGraph.Location = new Point(93, 14);
+            chb_directedGraph.Name = "chb_directedGraph";
+            chb_directedGraph.Size = new Size(122, 19);
+            chb_directedGraph.TabIndex = 17;
+            chb_directedGraph.Text = "Grafo Direcionado";
+            chb_directedGraph.UseVisualStyleBackColor = true;
+            // 
+            // btn_Start
+            // 
+            btn_Start.Location = new Point(12, 12);
+            btn_Start.Name = "btn_Start";
+            btn_Start.Size = new Size(75, 23);
+            btn_Start.TabIndex = 30;
+            btn_Start.Text = "Start";
+            btn_Start.UseVisualStyleBackColor = true;
+            btn_Start.Click += btn_Start_Click;
+            // 
             // GraphManipulatorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1395, 778);
+            ClientSize = new Size(1273, 923);
+            Controls.Add(btn_Start);
             Controls.Add(lb_vertexReturn);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(chb_directedGraph);
             Controls.Add(pn_addVertex);
             Controls.Add(label6);
-            Controls.Add(dgv_adjacencyListEdges);
-            Controls.Add(dgv_adjacencyListVertices);
+            Controls.Add(dgv_adjacencyList);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -437,8 +432,7 @@
             Name = "GraphManipulatorForm";
             Text = "Grafos";
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyMatrix).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyListVertices).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyListEdges).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_adjacencyList).EndInit();
             pn_addVertex.ResumeLayout(false);
             pn_addVertex.PerformLayout();
             panel1.ResumeLayout(false);
@@ -458,13 +452,11 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private DataGridView dgv_adjacencyListVertices;
-        private DataGridView dgv_adjacencyListEdges;
+        private DataGridView dgv_adjacencyList;
         private Button btn_av_addVertex;
         private Button btn_removeEdge;
         private Label label4;
         private Label label5;
-        private CheckBox chb_directedGraph;
         private Label label6;
         private TextBox tb_av_vertexName;
         private Label label7;
@@ -480,6 +472,7 @@
         private ComboBox cb_selectSucessorEdge;
         private ComboBox cb_selectPredecessorEdge;
         private Label lb_vertexReturn;
-        private DataGridViewTextBoxColumn Vertices;
+        private CheckBox chb_directedGraph;
+        private Button btn_Start;
     }
 }
