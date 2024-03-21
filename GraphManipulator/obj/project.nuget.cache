@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w2cK9wUJDQ3x19BSherKwFUXsywF7wQ45JdjeVxEcp/4ZgWyHN7CM5r1BBw4yAf3zUGLCVKeighALqdAbaQGSA==",
+  "dgSpecHash": "uDw41FYM7WXpT01jYdGsu4JfAERx+O7G1Hnfwgx3+HNuRDW7VLz/QXNdFstf2q/HXYZNQI2R4WJYVl8LaB4NfQ==",
   "success": true,
-  "projectFilePath": "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\GraphManipulator.csproj",
+  "projectFilePath": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
