@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj": {}
+    "C:\\Users\\dias_\\Source\\Repos\\GraphManipulator\\GraphManipulator\\GraphManipulator.csproj": {}
   },
   "projects": {
-    "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj": {
+    "C:\\Users\\dias_\\Source\\Repos\\GraphManipulator\\GraphManipulator\\GraphManipulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj",
+        "projectUniqueName": "C:\\Users\\dias_\\Source\\Repos\\GraphManipulator\\GraphManipulator\\GraphManipulator.csproj",
         "projectName": "GraphManipulator",
-        "projectPath": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj",
-        "packagesPath": "C:\\Users\\ammag\\.nuget\\packages\\",
-        "outputPath": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\obj\\",
+        "projectPath": "C:\\Users\\dias_\\Source\\Repos\\GraphManipulator\\GraphManipulator\\GraphManipulator.csproj",
+        "packagesPath": "C:\\Users\\dias_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dias_\\Source\\Repos\\GraphManipulator\\GraphManipulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "d:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ammag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dias_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://meep-app.pkgs.visualstudio.com/735a1e53-3aa4-46a0-a8b4-a9c46bfb2625/_packaging/Meep-Feed/nuget/v3/index.jsonhttps://meep-app.pkgs.visualstudio.com/735a1e53-3aa4-46a0-a8b4-a9c46bfb2625/_packaging/Meep-Feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
@@ -62,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
