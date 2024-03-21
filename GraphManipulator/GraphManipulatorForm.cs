@@ -7,8 +7,6 @@ namespace GraphManipulator
         private Graph Graph { get; set; }
         public GraphManipulatorForm()
         {
-            Graph = new Graph();
-
             InitializeComponent();
         }
 
@@ -54,45 +52,86 @@ namespace GraphManipulator
             }
         }
 
-        private void UpdateDgvAdjacencyListVertices()
+        private void UpdateDgvAdjacencyList()
         {
-            List<string> vertices = Graph.GetAllVerticesNames();
+            dgv_adjacencyList.Columns.Clear();
+            dgv_adjacencyList.Rows.Clear();
 
-            dgv_adjacencyListVertices.Rows.Clear();
-
-            foreach (string vertex in vertices)
+            foreach (var vertex in Graph.AdjacencyList.Keys)
             {
-                dgv_adjacencyListVertices.Rows.Add(vertex);
+                DataGridViewTextBoxColumn column = new DataGridViewTextBoxColumn();
+                column.HeaderText = vertex;
+                dgv_adjacencyList.Columns.Add(column);
             }
-        }
 
-        private void UpdateDgvAdjacencyListEdges()
-        {
+            int columnIndex = 0;
+            foreach (var vertex in Graph.AdjacencyList.Keys)
+            {
+                int rowIndex = 0;
+                foreach (var neighbor in Graph.AdjacencyList[vertex])
+                {
+                    if (dgv_adjacencyList.Rows.Count < rowIndex + 1)
+                        dgv_adjacencyList.Rows.Add();
 
+                    dgv_adjacencyList.Rows[rowIndex].Cells[columnIndex].Value = neighbor;
+
+                    rowIndex++;
+                }
+                columnIndex++;
+            }
         }
 
         #endregion
 
         #region Events
+        private void btn_Start_Click(object sender, EventArgs e)
+        {
+            if (btn_Start.Text == "Start")
+            {
+                chb_directedGraph.Enabled = false;
+
+                dgv_adjacencyList.Columns.Clear();
+                dgv_adjacencyList.Rows.Clear();
+                Graph = new Graph(chb_directedGraph.Checked);
+
+                btn_exhibitionModeList.Enabled = true;
+                btn_exhibitionModeMatrix.Enabled = true;
+
+                btn_Start.Text = "Reset";
+            }
+            else if (btn_Start.Text == "Reset")
+            {
+                chb_directedGraph.Checked = false;
+                chb_directedGraph.Enabled = true;
+                btn_Start.Text = "Start";
+
+                btn_exhibitionModeList.Enabled = false;
+                btn_exhibitionModeMatrix.Enabled = false;
+
+                dgv_adjacencyList.Visible = false;
+                dgv_adjacencyMatrix.Visible = false;
+
+                tb_av_vertexName.Enabled = false;
+                btn_av_addVertex.Enabled = false;
+
+                cb_rv_selectVertex.Enabled = false;
+                cb_rv_selectVertex.Items.Clear();
+                cb_selectPredecessorEdge.Items.Clear();
+                cb_selectSucessorEdge.Items.Clear();
+            }
+
+        }
         private void btn_exhibitionModeList_Click(object sender, EventArgs e)
         {
+            dgv_adjacencyList.Visible = true;
             dgv_adjacencyMatrix.Visible = false;
-
-            dgv_adjacencyListVertices.Visible = true;
-            dgv_adjacencyListEdges.Visible = true;
-
-            chb_directedGraph.Enabled = true;
 
             resetVertecesControls(true);
         }
         private void btn_exhibitionModeMatrix_Click(object sender, EventArgs e)
         {
-            dgv_adjacencyListVertices.Visible = false;
-            dgv_adjacencyListEdges.Visible = false;
-
+            dgv_adjacencyList.Visible = false;
             dgv_adjacencyMatrix.Visible = true;
-
-            chb_directedGraph.Enabled = true;
 
             resetVertecesControls(true);
         }
@@ -111,7 +150,7 @@ namespace GraphManipulator
 
                 tb_av_vertexName.Text = "";
 
-                UpdateDgvAdjacencyListVertices();
+                UpdateDgvAdjacencyList();
                 ResetEdgesSelectionComboBox();
             }
         }
@@ -134,7 +173,7 @@ namespace GraphManipulator
 
                 ResetSelectVertexComboBox(cb_rv_selectVertex);
 
-                UpdateDgvAdjacencyListVertices();
+                UpdateDgvAdjacencyList();
                 ResetEdgesSelectionComboBox();
             }
 
@@ -182,7 +221,7 @@ namespace GraphManipulator
                     ResetSelectVertexComboBox(cb_selectPredecessorEdge);
                     ResetSelectVertexComboBox(cb_selectSucessorEdge);
 
-                    UpdateDgvAdjacencyListEdges();
+                    UpdateDgvAdjacencyList();
                 }
                 else
                 {
@@ -191,5 +230,7 @@ namespace GraphManipulator
             }
         }
         #endregion
+
+
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphManipulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaffd376ec0ad0332e332d9d05abf46282319081")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphManipulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphManipulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,37 +12,91 @@ namespace GraphManipulator
         public bool IsDirectGraph { get; set; }
         private List<Vertex> Vertices { get; set; }
         private List<Edge> Edges { get; set; }
+        public Dictionary<string, List<string>> AdjacencyList { get; private set; }
+        public int[,] AdjacencyMatrix { get; private set; }
 
-        public Graph()
+        public Graph(bool isDirectGraph)
         {
+            IsDirectGraph = isDirectGraph;
+
             Vertices = new List<Vertex>();
             Edges = new List<Edge>();
+
+            AdjacencyMatrix = new int[0, 0];
+            AdjacencyList = new Dictionary<string, List<string>>();
         }
 
-        public void AddVertex(string name)
+        #region GraphPrivateMethods
+        private int GetVertexIndexInVertices(string vertexName)
         {
-            Vertices.Add(new Vertex(name));
-        }
-
-        public bool RemoveVertex(string vertexName)
-        {
-            int selectedIndex = 0;
-            bool vertexFound = false;
-
             for (int i = 0; i < Vertices.Count; i++)
             {
                 if (Vertices[i].Name == vertexName)
                 {
-                    vertexFound = true;
-
-                    selectedIndex = i;
-                    i = Vertices.Count;
+                    return i;
                 }
             }
 
-            if (vertexFound)
+            return -1;
+        }
+
+        private void UpdateAdjacencyMatrix()
+        {
+            int vertexCount = Vertices.Count;
+
+            AdjacencyMatrix = new int[vertexCount, vertexCount];
+            for (int i = 0; i < vertexCount; i++)
             {
-                Vertices.RemoveAt(selectedIndex);
+                for (int j = 0; j < vertexCount; j++)
+                {
+                    AdjacencyMatrix[i, j] = 0;
+                }
+            }
+
+            foreach (Edge edge in Edges)
+            {
+                int row = Vertices.IndexOf(edge.Predecessor);
+                int col = Vertices.IndexOf(edge.Successor);
+
+                AdjacencyMatrix[row, col] += 1;
+
+                if (!IsDirectGraph)
+                    AdjacencyMatrix[col, row] += 1;
+            }
+        }
+        #endregion
+
+        #region VetexMethods
+        public bool AddVertex(string name)
+        {
+            foreach (var vertex in Vertices)
+            {
+                if (vertex.Name == name)
+                {
+                    return false;
+                }
+            }
+
+            Vertex newVertex = new Vertex(name);
+            Vertices.Add(newVertex);
+
+            AdjacencyList.Add(newVertex.Name, new List<string>());
+            UpdateAdjacencyMatrix();
+
+            return true;
+        }
+
+        public bool RemoveVertex(string vertexName)
+        {
+            int vertexIndex = GetVertexIndexInVertices(vertexName);
+
+            if (vertexIndex != -1)
+            {
+                Vertices.RemoveAt(vertexIndex);
+
+                AdjacencyList.Remove(vertexName);
+                UpdateAdjacencyMatrix();
+
                 return true;
             }
 
@@ -60,67 +114,37 @@ namespace GraphManipulator
 
             return names;
         }
+        #endregion
 
-        public bool AddEdge(string predecessorVertexName, string successorVertexName)
+        #region EdgeMethods
+        private bool AddEdge(Vertex predecessorVertex, Vertex successorVertex)
         {
-            Vertex tmpPredecessorVertex = new Vertex();
-            Vertex tmpSuccessorVertex = new Vertex();
-
-            foreach (var vertex in Vertices)
+            if (predecessorVertex != null && successorVertex != null)
             {
-                if (vertex.Name == predecessorVertexName)
-                {
-                    tmpPredecessorVertex = vertex;
-                }
-                if (vertex.Name == successorVertexName)
-                {
-                    tmpSuccessorVertex = vertex;
-                }
-            }
+                string edgeName = "e" + Edges.Count;
+                Edges.Add(new Edge(edgeName, predecessorVertex, successorVertex));
+                
+                AdjacencyList[predecessorVertex.Name].Add(successorVertex.Name);
+                if (!IsDirectGraph) AdjacencyList[successorVertex.Name].Add(predecessorVertex.Name);
 
-            if (tmpPredecessorVertex.Name != null && tmpSuccessorVertex.Name != null)
-            {
-                Edges.Add(new Edge(tmpPredecessorVertex, tmpSuccessorVertex));
+                UpdateAdjacencyMatrix();
+
                 return true;
             }
 
             return false;
         }
 
-        //public List<string> GetEdgesByVertex(string name)
-        //{
-        //    List<string> edgesToReturn = new List<string>();
-
-        //    Vertex tmpVertex = new Vertex();
-
-        //    foreach (var vertex in Vertices)
-        //    {
-        //        if (vertex.Name == name)
-        //        {
-        //            tmpVertex = vertex;
-        //        }
-        //    }
-
-        //    foreach (var edge in Edges)
-        //    {
-        //        if (edge.Predecessor == tmpVertex)
-        //        {
-        //            edgesToReturn
-        //        }
-        //    }
-        //}
-
-        public void RemoveEdge(int edgeIndex)
+        public bool AddEdge(string predecessorVertexName, string successorVertexName)
         {
-            Edges.RemoveAt(edgeIndex);
+            return AddEdge(Vertices[GetVertexIndexInVertices(predecessorVertexName)], Vertices[GetVertexIndexInVertices(successorVertexName)]);
         }
+        #endregion
 
         #region VertexClass
         private class Vertex
         {
             public string Name { get; set; }
-
-            public Vertex() { }
             public Vertex(string name)
             {
                 Name = name;
@@ -131,15 +155,104 @@ namespace GraphManipulator
         #region EdgeClass
         private class Edge
         {
+            public string Name { get; set; }
             public Vertex Predecessor { get; set; }
             public Vertex Successor { get; set; }
 
-            public Edge(Vertex predecessor, Vertex successor)
+            public Edge(string name, Vertex predecessor, Vertex successor)
             {
+                Name = name;
                 Predecessor = predecessor;
                 Successor = successor;
             }
         }
         #endregion
+
+
+        public List<string> GetNeighbors(string vertexName)
+        {
+            return AdjacencyList[vertexName];
+        }
+
+        public List<string> GetPredecessors(string vertexName)
+        {
+            List<string> predecessors = new List<string>();
+
+            foreach (var vertex in Vertices)
+            {
+                if (AdjacencyList[vertex.Name].Contains(vertexName))
+                {
+                    predecessors.Add(vertex.Name);
+                }
+            }
+
+            return predecessors;
+        }
+
+        public List<string> GetSuccessors(string vertexName)
+        {
+            return AdjacencyList[vertexName];
+        }
+
+        public int GetDegree(string vertexName)
+        {
+            int degree = 0;
+
+            if (IsDirectGraph)
+            {
+                degree = GetPredecessors(vertexName).Count + GetSuccessors(vertexName).Count;
+            }
+            else
+            {
+                degree = GetNeighbors(vertexName).Count;
+            }
+
+            return degree;
+        }
+
+        bool isSimple()
+        {
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) > 1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        public bool isRegular()
+        {
+            int degree = GetDegree(Vertices[0].Name);
+
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) != degree)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool isComplete()
+        {
+            int vertexCount = Vertices.Count;
+
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) != vertexCount - 1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
     }
 }
