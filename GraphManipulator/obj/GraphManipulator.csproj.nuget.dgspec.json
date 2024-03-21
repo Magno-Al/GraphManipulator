@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\GraphManipulator.csproj": {}
+    "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj": {}
   },
   "projects": {
-    "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\GraphManipulator.csproj": {
+    "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\GraphManipulator.csproj",
+        "projectUniqueName": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj",
         "projectName": "GraphManipulator",
-        "projectPath": "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\GraphManipulator.csproj",
+        "projectPath": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\GraphManipulator.csproj",
         "packagesPath": "C:\\Users\\ammag\\.nuget\\packages\\",
-        "outputPath": "D:\\Faculdade\\Eng_Computação\\GraphManipulator\\obj\\",
+        "outputPath": "D:\\Faculdade\\Eng_Computação\\05_Grafos\\GraphManipulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
