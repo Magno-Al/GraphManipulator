@@ -1,0 +1,16 @@
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\TpGrafos.exe
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\TpGrafos.deps.json
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\TpGrafos.runtimeconfig.json
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\TpGrafos.dll
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\TpGrafos.pdb
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.Grafos.resources
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.csproj.GenerateResource.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.AssemblyInfoInputs.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.AssemblyInfo.cs
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.csproj.CoreCompileInputs.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.dll
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\refint\TpGrafos.dll
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.pdb
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\TpGrafos.genruntimeconfig.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\ref\TpGrafos.dll

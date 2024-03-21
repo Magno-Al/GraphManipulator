@@ -1,0 +1,65 @@
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.exe
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.deps.json
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.runtimeconfig.json
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.dll
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.pdb
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GraphManipulatorForm.resources
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.GenerateResource.cache
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfoInputs.cache
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfo.cs
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.CoreCompileInputs.cache
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.dll
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\refint\GraphManipulator.dll
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.pdb
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.genruntimeconfig.cache
+C:\Users\ammag\Desktop\Grafos\GraphManipulator\obj\Debug\net6.0-windows\ref\GraphManipulator.dll
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.exe
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.deps.json
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.runtimeconfig.json
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.dll
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.pdb
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GraphManipulatorForm.resources
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.GenerateResource.cache
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfoInputs.cache
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfo.cs
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.CoreCompileInputs.cache
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.sourcelink.json
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.dll
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\refint\GraphManipulator.dll
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.pdb
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.genruntimeconfig.cache
+C:\Users\ammag\Área de Trabalho\Grafos\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\ref\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.exe
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.deps.json
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.runtimeconfig.json
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.pdb
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GraphManipulatorForm.resources
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.GenerateResource.cache
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfoInputs.cache
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfo.cs
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.CoreCompileInputs.cache
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\refint\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.pdb
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.genruntimeconfig.cache
+D:\Faculdade\Eng_Computação\GRAFOS\Tp1\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\ref\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.exe
+D:\Faculdade\Eng_Computação\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.deps.json
+D:\Faculdade\Eng_Computação\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.runtimeconfig.json
+D:\Faculdade\Eng_Computação\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GraphManipulator\bin\Debug\net6.0-windows\GraphManipulator.pdb
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GraphManipulatorForm.resources
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.GenerateResource.cache
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfoInputs.cache
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.AssemblyInfo.cs
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.csproj.CoreCompileInputs.cache
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\refint\GraphManipulator.dll
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.pdb
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.genruntimeconfig.cache
+D:\Faculdade\Eng_Computação\GraphManipulator\obj\Debug\net6.0-windows\ref\GraphManipulator.dll

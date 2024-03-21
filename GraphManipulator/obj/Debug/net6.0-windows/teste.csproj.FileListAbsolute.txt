@@ -1,0 +1,16 @@
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\teste.exe
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\teste.deps.json
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\teste.runtimeconfig.json
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\teste.dll
+C:\Users\ammag\Desktop\Grafos\teste\bin\Debug\net6.0-windows\teste.pdb
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.csproj.GenerateResource.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.AssemblyInfoInputs.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.AssemblyInfo.cs
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.csproj.CoreCompileInputs.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.dll
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\refint\teste.dll
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.pdb
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.genruntimeconfig.cache
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\ref\teste.dll
+C:\Users\ammag\Desktop\Grafos\teste\obj\Debug\net6.0-windows\teste.Grafos.resources
