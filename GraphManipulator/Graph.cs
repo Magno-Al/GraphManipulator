@@ -15,15 +15,24 @@ namespace GraphManipulator
         public Dictionary<string, List<string>> AdjacencyList { get; private set; }
         public int[,] AdjacencyMatrix { get; private set; }
 
-        public Graph(bool isDirectGraph)
+        public Graph(int vertices, bool isDirectGraph)
         {
             IsDirectGraph = isDirectGraph;
 
             Vertices = new List<Vertex>();
             Edges = new List<Edge>();
 
-            AdjacencyMatrix = new int[0, 0];
+            AdjacencyMatrix = new int[vertices, vertices];
             AdjacencyList = new Dictionary<string, List<string>>();
+
+            string alfabeth = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            for (int i = 0; i < vertices; i++)
+            {
+                int index = i % alfabeth.Length;
+                string vertice = alfabeth[index].ToString();
+                AddVertex(vertice);
+            }
         }
 
         #region GraphPrivateMethods

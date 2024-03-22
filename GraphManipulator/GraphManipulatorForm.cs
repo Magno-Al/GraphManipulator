@@ -5,6 +5,7 @@ namespace GraphManipulator
     public partial class GraphManipulatorForm : Form
     {
         private Graph Graph { get; set; }
+        private int startVertices = 0;
         public GraphManipulatorForm()
         {
             InitializeComponent();
@@ -92,10 +93,18 @@ namespace GraphManipulator
 
                 dgv_adjacencyList.Columns.Clear();
                 dgv_adjacencyList.Rows.Clear();
-                Graph = new Graph(chb_directedGraph.Checked);
+
+                int vertices = int.Parse(maskedTextBox1.Text);
+                
+                Graph = new Graph(vertices, chb_directedGraph.Checked);
 
                 btn_exhibitionModeList.Enabled = true;
                 btn_exhibitionModeMatrix.Enabled = true;
+
+                dgv_adjacencyList.Visible = true;
+                dgv_adjacencyMatrix.Visible = false;
+
+                resetVertecesControls(true);
 
                 btn_Start.Text = "Reset";
             }
@@ -113,6 +122,8 @@ namespace GraphManipulator
 
                 tb_av_vertexName.Enabled = false;
                 btn_av_addVertex.Enabled = false;
+
+                maskedTextBox1.Text = "";
 
                 cb_rv_selectVertex.Enabled = false;
                 cb_rv_selectVertex.Items.Clear();
@@ -231,6 +242,23 @@ namespace GraphManipulator
         }
         #endregion
 
+        private void GraphManipulatorForm_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (int.TryParse(maskedTextBox1.Text, out int valor))
+            {
+                // Se a conversão for bem-sucedida, atualiza o valorDigitado
+               startVertices = valor;
+            }
+            else
+            {
+                // Se a conversão falhar, pode lidar com isso aqui, se necessário
+                // Por exemplo, pode definir um valor padrão ou exibir uma mensagem de erro
+            }
+        }
     }
 }
