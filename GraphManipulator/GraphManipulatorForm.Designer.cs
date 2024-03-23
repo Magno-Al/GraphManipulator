@@ -60,6 +60,8 @@
             lb_vertexReturn = new Label();
             chb_directedGraph = new CheckBox();
             btn_Start = new Button();
+            label11 = new Label();
+            maskedTextBox1 = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyMatrix).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyList).BeginInit();
             pn_addVertex.SuspendLayout();
@@ -393,7 +395,7 @@
             // chb_directedGraph
             // 
             chb_directedGraph.AutoSize = true;
-            chb_directedGraph.Location = new Point(93, 14);
+            chb_directedGraph.Location = new Point(19, 42);
             chb_directedGraph.Name = "chb_directedGraph";
             chb_directedGraph.Size = new Size(122, 19);
             chb_directedGraph.TabIndex = 17;
@@ -402,19 +404,39 @@
             // 
             // btn_Start
             // 
-            btn_Start.Location = new Point(12, 12);
+            btn_Start.Location = new Point(166, 9);
             btn_Start.Name = "btn_Start";
-            btn_Start.Size = new Size(75, 23);
+            btn_Start.Size = new Size(82, 51);
             btn_Start.TabIndex = 30;
             btn_Start.Text = "Start";
             btn_Start.UseVisualStyleBackColor = true;
             btn_Start.Click += btn_Start_Click;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(19, 14);
+            label11.Name = "label11";
+            label11.Size = new Size(73, 15);
+            label11.TabIndex = 32;
+            label11.Text = "Qtd Vertices:";
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(98, 10);
+            maskedTextBox1.Mask = "000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(32, 23);
+            maskedTextBox1.TabIndex = 33;
+            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // GraphManipulatorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 923);
+            Controls.Add(maskedTextBox1);
+            Controls.Add(label11);
             Controls.Add(btn_Start);
             Controls.Add(lb_vertexReturn);
             Controls.Add(panel2);
@@ -431,6 +453,7 @@
             Controls.Add(dgv_adjacencyMatrix);
             Name = "GraphManipulatorForm";
             Text = "Grafos";
+            Load += GraphManipulatorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyMatrix).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgv_adjacencyList).EndInit();
             pn_addVertex.ResumeLayout(false);
@@ -474,5 +497,7 @@
         private Label lb_vertexReturn;
         private CheckBox chb_directedGraph;
         private Button btn_Start;
+        private Label label11;
+        private MaskedTextBox maskedTextBox1;
     }
 }
