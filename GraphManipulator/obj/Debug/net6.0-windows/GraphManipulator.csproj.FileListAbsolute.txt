@@ -95,3 +95,4 @@ C:\Users\dias_\Source\Repos\GraphManipulator\GraphManipulator\obj\Debug\net6.0-w
 C:\Users\dias_\Source\Repos\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.pdb
 C:\Users\dias_\Source\Repos\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.genruntimeconfig.cache
 C:\Users\dias_\Source\Repos\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\ref\GraphManipulator.dll
+C:\Users\dias_\source\repos\GraphManipulator\GraphManipulator\obj\Debug\net6.0-windows\GraphManipulator.sourcelink.json

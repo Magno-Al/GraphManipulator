@@ -424,7 +424,7 @@
             // maskedTextBox1
             // 
             maskedTextBox1.Location = new Point(98, 10);
-            maskedTextBox1.Mask = "0";
+            maskedTextBox1.Mask = "000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(32, 23);
             maskedTextBox1.TabIndex = 33;

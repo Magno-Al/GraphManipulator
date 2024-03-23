@@ -94,6 +94,8 @@ namespace GraphManipulator
                 dgv_adjacencyList.Columns.Clear();
                 dgv_adjacencyList.Rows.Clear();
 
+                maskedTextBox1.Text = maskedTextBox1.Text.Length > 0 ? maskedTextBox1.Text : "0";
+
                 int vertices = int.Parse(maskedTextBox1.Text);
                 
                 Graph = new Graph(vertices, chb_directedGraph.Checked);
@@ -101,10 +103,18 @@ namespace GraphManipulator
                 btn_exhibitionModeList.Enabled = true;
                 btn_exhibitionModeMatrix.Enabled = true;
 
-                dgv_adjacencyList.Visible = true;
-                dgv_adjacencyMatrix.Visible = false;
+                if (vertices > 0)
+                {
+                    UpdateDgvAdjacencyList();
+                    ResetEdgesSelectionComboBox();
 
-                resetVertecesControls(true);
+                    dgv_adjacencyList.Visible = true;
+                    dgv_adjacencyMatrix.Visible = false;
+
+                    resetVertecesControls(true);
+                }
+
+
 
                 btn_Start.Text = "Reset";
             }
@@ -155,7 +165,7 @@ namespace GraphManipulator
             }
             else
             {
-                Graph.AddVertex(tb_av_vertexName.Text);
+                Graph.AddVertex(tb_av_vertexName.Text, chb_directedGraph.Checked);
 
                 lb_vertexReturn.Text = $"Vertice {tb_av_vertexName.Text} adicionado";
 

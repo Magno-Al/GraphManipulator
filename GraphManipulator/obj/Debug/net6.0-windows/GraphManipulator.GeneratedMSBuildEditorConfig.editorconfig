@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GraphManipulator
-build_property.ProjectDir = C:\Users\dias_\Source\Repos\GraphManipulator\GraphManipulator\
+build_property.ProjectDir = C:\Users\dias_\source\repos\GraphManipulator\GraphManipulator\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
