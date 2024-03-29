@@ -167,5 +167,92 @@ namespace GraphManipulator
             }
         }
         #endregion
+
+
+        public List<string> GetNeighbors(string vertexName)
+        {
+            return AdjacencyList[vertexName];
+        }
+
+        public List<string> GetPredecessors(string vertexName)
+        {
+            List<string> predecessors = new List<string>();
+
+            foreach (var vertex in Vertices)
+            {
+                if (AdjacencyList[vertex.Name].Contains(vertexName))
+                {
+                    predecessors.Add(vertex.Name);
+                }
+            }
+
+            return predecessors;
+        }
+
+        public List<string> GetSuccessors(string vertexName)
+        {
+            return AdjacencyList[vertexName];
+        }
+
+        public int GetDegree(string vertexName)
+        {
+            int degree = 0;
+
+            if (IsDirectGraph)
+            {
+                degree = GetPredecessors(vertexName).Count + GetSuccessors(vertexName).Count;
+            }
+            else
+            {
+                degree = GetNeighbors(vertexName).Count;
+            }
+
+            return degree;
+        }
+
+        bool isSimple()
+        {
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) > 1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        public bool isRegular()
+        {
+            int degree = GetDegree(Vertices[0].Name);
+
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) != degree)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool isComplete()
+        {
+            int vertexCount = Vertices.Count;
+
+            foreach (var vertex in Vertices)
+            {
+                if (GetDegree(vertex.Name) != vertexCount - 1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
     }
 }
